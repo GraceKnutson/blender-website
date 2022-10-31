@@ -1,0 +1,144 @@
+body {
+  /* Sets style (margin and font) for body */
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+  background-color: rgb(255, 253, 255);
+}
+
+.header {
+  text-align: center;
+  background-color: rgb(58, 20, 55);
+  color: #ffffff;
+  padding: 1px;
+}
+
+.nav {
+  /* Sets colour of nav bar to a dark purple*/
+  overflow: hidden;
+  background-color: rgb(73, 28, 69);
+}
+
+.nav a {
+  /* This is a good example of how you can select only tags within a tag to be affected by your CSS. The nav refers to 
+  the class of the <nav> tag, and the a refers to the <a> tag. This means that only anchors within the <nav> tag will be affected 
+  by the following CSS. */
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav a.active {
+  /* The active selector refers to an active link. This means that whichever page is currently loaded will 
+  appear as light purple in the nav bar. */
+  color: rgb(192, 115, 186);
+}
+
+.nav a:hover {
+  /* The hover selector refers to where the mouse is hovering. This means the place where the mouse hovers 
+  will become the lighter purple part of the nav bar. */
+  color: rgb(236, 197, 234);
+}
+
+.main {
+  padding-left: 16px;
+}
+
+.main p {
+  margin: 1px;
+}
+
+.main img {
+  float: right;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.main form {
+  float: right;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 99%;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 4px solid rgb(255, 255, 255);
+  text-align: left;
+}
+
+th {
+  background-color: rgb(234, 118, 0);
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+tr:nth-child(even) {
+  /* The "tr" refers to table rows. The "nth-child" selector uses n as a variable. "nth-child(n)". 
+  All even table rows will have this background colour. */
+  background: #fee2bd;
+}
+
+tr:nth-child(odd) {
+  /* All odd table rows will have this background colour */
+  background: #fff1df;
+}
+
+td {
+  color: rgb(0, 0, 0);
+}
+
+.main iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main p.link {
+  text-align: center;
+}
+
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+
+  width: 200px;
+}
+
+option {
+  padding: 0;
+  transform: rotate(-90deg); /* This evens out the vertical-lr */
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  margin: 0 30px 0 0px;
+} /* Margins should be set better later */
+
+form {
+  width: 500px;
+  height: 530px;
+  position: relative;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.project {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}

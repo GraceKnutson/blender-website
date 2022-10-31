@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blender Survey</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/blackandwhitelogo.jpg"
+      alt="An image of the blender logo, an orange hand with three fingers up and fourth and fifth fingers making a circle, 
+    like an “OK” hand sign. The image is in black and white." />
+
+    <link rel="stylesheet" href="styling.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Blender</h1>
+    </header>
+
+    <nav class="nav">
+      <a href="index.html">About Blender</a>
+      <a href="navigation.html">Navigating Blender</a>
+      <a href="shortcuts.html">Blender Shortcuts</a>
+      <a href="projects.html">Blender Projects</a>
+      <a class="active" href="survey.html">Survey</a>
+    </nav>
+
+    <main class="main">
+      <h2>Survey</h2>
+
+      <form name="code-form" id="show" method="get" autocomplete="on">
+        <!-- Autocomplete is on. -->
+        <!--Input types always have a type, name and ID. The type is used to determine the type of input. 
+        The name specifies the name of the input, and ID can be used to reference the input. This is why, within the 
+        labels, the "for" attribute is the same as the ID attribute for the input it corresponds to. -->
+
+        <label for="age">1. How old are you? (Required)</label>
+        <br />
+        <input type="number" id="age" name="age" min="1" max="5" required />
+
+        <br />
+        <br />
+
+        <!-- Radio buttons use the same name attribute, which ensures that only one can be selected at a time.-->
+        <p>2. Have you ever used Blender before? (Required)</p>
+        <input type="radio" name="used-blender" id="yes" value="yes" required />
+        <label for="yes">Yes</label>
+        <input type="radio" name="used-blender" id="no" value="no" />
+        <label for="no">No</label>
+
+        <br />
+        <br />
+
+        <p>3. Have you ever learned any programming/coding? (Required)</p>
+        <input type="radio" name="coded" id="yes" value="yes" required />
+        <label for="yes">Yes</label>
+        <input type="radio" name="coded" id="no" value="no" />
+        <label for="no">No</label>
+
+        <br />
+        <br />
+
+        <fieldset>
+          <legend>4. Do you have experience with any of the following animation softwares? (Select all that apply)</legend>
+          <label for="maya">Maya</label>
+          <input type="checkbox" name="maya" id="maya" value="used" />
+
+          <label for="daz-studio">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDaz Studio</label>
+          <input type="checkbox" name="daz-studio" id="daz-studio" value="used" />
+
+          <label for="3ds-max">3ds Max</label>
+          <input type="checkbox" name="3ds-max" id="3ds-max" value="used" />
+
+          <br />
+          <!--This starts teh second line of checkboxes. The &nbsp's even them all out.-->
+
+          <label for="motionbuilder">Motionbuilder</label>
+          <input type="checkbox" name="motionbuilder" id="motionbuilder" value="used" />
+
+          <label for="cinema-4d">Cinema 4D</label>
+          <input type="checkbox" name="cinema-4d" id="cinema-4d" value="used" />
+
+          <label for="houdini">Houdini</label>
+          <input type="checkbox" name="houdini" id="houdini" value="used" />
+        </fieldset>
+
+        <br />
+        <br />
+
+        <label for="rating">5. How satisfied are you with this website? (Scale of 1-5, required)</label>
+        <br />
+        <input type="range" id="rating" name="rating" list="tickmarks" min="1" max="5" />
+        <!-- This is the range input. It creates a slider. The type, name and ID attributes are all the same as the other
+        inputs, however there is also a list attribute. This allows it to be referenced by the datalist tag.-->
+
+        <!-- The datalist tag "specifies a list of pre-defined options for an <input> element." See W3Schools for
+        more information. For this webpage, I have used the datalist to provide numbering (1-5) underneath the range.
+        The options have been styled in CSS to suit my needs.-->
+        <datalist id="tickmarks">
+          <option value="1" label="1"></option>
+          <option value="2" label="2"></option>
+          <option value="3" label="3"></option>
+          <option value="4" label="4"></option>
+          <option value="5" label="5"></option>
+        </datalist>
+
+        <br />
+
+        <!-- The texterea simply provides a free comments space at the bottom of the survey.-->
+        <label for="comments">6. Is there anything I can do to improve my website?</label>
+        <br />
+        <textarea name="additional-comments" id="comments" rows="5" cols="50" placeholder="Type out suggestions here!"></textarea>
+        <!-- Placeholder attribute puts example/explanation text within the input. -->
+
+        <br />
+        <br />
+
+        <input type="submit" name="submit-button" id="submit" value="Submit" />
+
+        <!-- This should be spaced out and away from the submit button in the future!!!-->
+        <input type="reset" name="clear-form" id="clear" value="Reset Form" />
+      </form>
+
+      <p>
+        To the right is a quick survey that will help to better improve this website by understanding who is learning Blender and what prior
+        skillsets they are equipped with. It would be greatly appreciated if you could take a few moments out of your day to answer some
+        questions about your experience with coding, animation and work in 3D, as well as provide some comments as to whether or not this
+        website helped you. Thanks!
+      </p>
+
+      <!-- An image could be added to the lower left hand side of this page. Additionally, the survey part is not distinguished from the paragraph
+      very well... something to fix later. -->
+    </main>
+  </body>
+</html>
